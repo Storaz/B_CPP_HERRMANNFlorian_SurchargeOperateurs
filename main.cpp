@@ -3,14 +3,6 @@
 #include <string.h>
 #include "CVect2D.h"
 
-CVect2D operator+(CVect2D a, CVect2D b) {
-
-	CVect2D resultat;
-	resultat.setVectX(a.getVectX() + b.getVectX());
-	resultat.setVectY(a.getVectY() + b.getVectY());
-	return resultat;
-}
-
 int main() {
 
 	float fltX;
@@ -50,7 +42,7 @@ int main() {
 	Scalaire.setVectX(fltX);
 
 	//Addition entre 2 classes
-	Vecteur3 = CVect2D(Vecteur1) + CVect2D(Vecteur2); //Je dois préciser la classe devant la variable sinon l'opérante est ambïgue
+	Vecteur3 = Vecteur1 + Vecteur2;
 	std::cout << "Addition" << std::endl;
 	std::cout << "Valeur en X: " << Vecteur3.getVectX() << std::endl; //On récupère la valeur en X
 	std::cout << "Valeur en Y: " << Vecteur3.getVectY() << std::endl; //On récupère la valeur en Y
